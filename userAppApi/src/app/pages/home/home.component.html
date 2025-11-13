@@ -1,0 +1,22 @@
+<nav class="top-nav">
+  <div class="nav-left">
+    <div class="logo">Money Manager</div>
+  </div>
+
+  <div class="nav-right">
+    <div class="nav-search-wrap">
+      <input type="search" placeholder="Search..." class="nav-search" />
+    </div>
+    <a routerLink="" class="btn">Home</a>
+    <a routerLink="/user-list" class="btn">Products</a>
+    <a routerLink="/login" class="btn">Log In</a>
+    
+    <button class="btn signout" (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="page-center">
+  <h1 class="page-title">Please Login</h1>
+</div>
+
+<router-outlet></router-outlet>

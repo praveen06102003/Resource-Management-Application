@@ -1,0 +1,61 @@
+.top-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 1rem;
+	background: #333;
+	color: white;
+	gap: 1rem;
+}
+.logo {
+	font-weight: 700;
+	font-size: 1.1rem;
+    color: #b38bff;
+}
+.nav-center { flex: 1; display:flex; justify-content:center; }
+.nav-search {
+	/* moved to the right side — use a fixed width so it fits with the buttons */
+	width: 220px;
+	max-width: 480px;
+	padding: 0.4rem 0.6rem;
+	border-radius: 8px;
+	border: none;
+}
+
+.nav-right {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+}
+.nav-search-wrap { margin-right: 0.25rem; }
+.nav-right .btn {
+	margin-left: 0.5rem;
+	background: transparent;
+	color: #e1dee5;
+	border: 1px solid rgba(255,255,255,0.2);
+	padding: 0.35rem 0.6rem;
+	border-radius: 4px;
+	text-decoration: none;
+}
+.nav-right .btn.signout {
+	background: #dc3545;
+	border-color: transparent;
+}
+@media (max-width:600px){
+	.nav-center { display:none; }
+	.nav-right .btn{ padding:0.3rem 0.4rem; font-size:0.9rem; }
+}
+
+/* Home page centered heading */
+.page-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5rem 1rem;
+}
+.page-title {
+	margin: 0;
+	font-size: 2rem;
+	color: #515050;
+	text-align: center;
+}

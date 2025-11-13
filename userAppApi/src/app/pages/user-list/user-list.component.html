@@ -1,0 +1,27 @@
+<!-- Simple, centered table — only show ID, Name, Email (password/mobile excluded) -->
+<div class="user-list">
+	<div *ngIf="users?.length; else noUsers">
+		<table class="user-table">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Name</th>
+					<th>Email</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let user of users">
+					<!-- use common fallback names to handle different API shapes -->
+					<td>{{ user.id || user.userId || user.userID || '-' }}</td>
+					<td>{{ user.name || user.userName || user.fullName || '-' }}</td>
+					  <td>{{ user.displayEmail }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<ng-template #noUsers>
+		<p>No users available.</p>
+	</ng-template>
+</div>
+
